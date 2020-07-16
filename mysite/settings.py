@@ -25,7 +25,7 @@ SECRET_KEY = 'b(xx#e%347cql^g)gfhpqdn_#xouxh43k4r3qx**n3gup(-h)1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jst-banjir-rob.my.id','185.210.144.235', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['185.210.144.235', 'localhost', '127.0.0.1', 'jenis-awan.site']
 
 
 # Application definition
