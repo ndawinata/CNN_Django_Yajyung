@@ -1,1 +1,1 @@
-python3 manage.py runserver jst-banjir-rob.my.id:8000
+python manage.py runserver jenis-awan.site:8000
