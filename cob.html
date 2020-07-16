@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        img {
+            max-width: 180px;
+        }
+
+        input[type=file] {
+            padding: 10px;
+            background: #2d2d2d;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <input id="myFile" type='file' onchange="myFunction()" />
+    <img id="blah" src="#" alt="your image" />
+    <p id="demo"></p>
+    <img alt="Pulpit Rock" width="284" height="213"> -->
+    <input type='file' onchange="readURL(this);" />
+    <img id="blah" src="http://placehold.it/180" alt="your image" />
+    <!-- <script>
+        function myFunction() {
+            var x = document.getElementById("myFile").value;
+            document.getElementById("demo").innerHTML = x;
+            $("img").attr("src", x)
+        }
+    </script> -->
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    console.log(e.target.result)
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+
+</html>
